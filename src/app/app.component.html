@@ -1,3 +1,37 @@
-<h1>
-  {{title}}
-</h1>
+<div class="row">
+	<div class="col-sm-2 sidenav">
+		<div *ngFor="let user of users">
+		  <a (click)="addTab(user)">{{ user.name }}</a>
+	  </div>
+	</div>
+	<div class="col-sm-10" style="margin-left:17%">
+		<!-- <tabset >
+			<tab *ngFor="let tab of tabs" title={{tab.title}} [active]={{tab.active}}>
+				{{tab.content}}
+			</tab>
+			
+		</tabset> -->
+		<tabset>
+			<tab *ngFor="let tab of tabs"
+				 [heading]="tab.title"
+				 [active]="tab.active"
+				 (select)="tab.active = true"
+				 (deselect)="tab.active = false">
+			  {{tab?.content}}
+			</tab>
+		  </tabset>
+		  <!-- <h3>Tabs</h3>
+	  <ul class="nav nav-tabs">
+		  <li  data-toggle="tab" class="active"><a href="#">Home</a></li>
+		  <li  data-toggle="tab" ><a href="#">Menu 1</a></li>
+		  <li data-toggle="tab" ><a href="#">Menu 2</a></li>
+		  <li data-toggle="tab" ><a href="#">Menu 3</a></li>
+		</ul>
+	  <br>
+	  <p><strong>Note:</strong> This example shows how to create a basic navigation tab. It is not toggleable/dynamic yet (you can't click on the links to display different content)- see the last example in the Bootstrap Tabs and Pills Tutorial to find out how this can be done.</p> -->
+	</div>
+</div>
+
+
+
+<router-outlet></router-outlet>

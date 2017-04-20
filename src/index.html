@@ -2,13 +2,143 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>Ahsd</title>
-  <base href="/">
+  <title>Affinity Helth System</title>
+  <style type="text/css">
+  	.overlay{
+  		position: fixed;
+  		top: 40vh;
+  		left: 40vw;
+  	}
+@keyframes spinner {
+  to {transform: rotate(360deg);}
+}
+ 
+.spinner:before {
+  content: '';
+  box-sizing: border-box;
+  position: absolute;
+  top: 30vh;
+  left: 36vw;
+  width: 300px;
+  height: 300px;
+  margin-top: -10px;
+  margin-left: -10px;
+  border-radius: 50%;
+  border: 2px solid transparent;
+  border-top-color: #c9304f;
+  border-bottom-color: #595c7d;
+  animation: spinner 5s ease infinite;
+  /*margin-top: -15px;
+  margin-left: -15px;
+  border-radius: 50%;
+  border: 1px solid #ccc;
+  border-top-color: #07d;
+  animation: spinner 5s linear infinite;*/
+}
+@keyframes spinner2 {
+  to {transform: rotate(360deg);}
+}
+ 
+.spinner2:before {
+  content: '';
+  box-sizing: border-box;
+  position: absolute;
+  top: 28.5vh;
+  left: 35.2vw;
+  width: 320px;
+  height: 320px;
+  margin-top: -10px;
+  margin-left: -10px;
+  border-radius: 50%;
+  border: 2px solid transparent;
+  border-top-color: #595c7d;
+  border-bottom-color: #c9304f;
+  animation: spinner 5s ease infinite;
+  animation-direction:reverse;
+  /*margin-top: -15px;
+  margin-left: -15px;
+  border-radius: 50%;
+  border: 1px solid #ccc;
+  border-top-color: #07d;
+  animation: spinner 5s linear infinite;*/
+}
+@keyframes spinner3 {
+  to {transform: rotate(360deg);}
+}
+ 
+.spinner3:before {
+  content: '';
+  box-sizing: border-box;
+  position: absolute;
+  top: 27.2vh;
+  left: 34.4vw;
+  width: 340px;
+  height: 340px;
+  margin-top: -10px;
+  margin-left: -10px;
+  border-radius: 50%;
+  border: 2px solid transparent;
+  border-top-color: #595c7d;
+  border-bottom-color: #c9304f;
+  animation: spinner 5s ease infinite;
+  /*margin-top: -15px;
+  margin-left: -15px;
+  border-radius: 50%;
+  border: 1px solid #ccc;
+  border-top-color: #07d;
+  animation: spinner 5s linear infinite;*/
+}
+@keyframes spinner4 {
+  to {transform: rotate(360deg);}
+}
+ 
+.spinner4:before {
+  content: '';
+  box-sizing: border-box;
+  position: absolute;
+  top: 25.7vh;
+  left: 33.6vw;
+  width: 360px;
+  height: 360px;
+  margin-top: -10px;
+  margin-left: -10px;
+  border-radius: 50%;
+  border: 2px solid transparent;
+  border-top-color: #595c7d;
+  border-bottom-color: #c9304f;
+  animation: spinner 5s ease infinite;
+  animation-direction:reverse;
+  /*margin-top: -15px;
+  margin-left: -15px;
+  border-radius: 50%;
+  border: 1px solid #ccc;
+  border-top-color: #07d;
+  animation: spinner 5s linear infinite;*/
+}
+  </style>
+  <base href="http://ahs.freeddns.org:4200">
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
 </head>
 <body>
-  <app-root>Loading...</app-root>
+  <ahsd-root>
+  <div class="spinner">
+  </div>
+	<div class="spinner2">
+  </div>
+	<div class="spinner3">
+  </div>
+	<div class="spinner4">
+  </div>
+
+
+
+
+	<div id="loader-wrapper">
+      <div id="loader"></div>
+      <img src="src/assets/logo.png" class="overlay">
+    </div>
+  </ahsd-root>
 </body>
 </html>
